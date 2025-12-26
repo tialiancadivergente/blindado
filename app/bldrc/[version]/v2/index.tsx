@@ -123,7 +123,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
       isPicture: false,
       isLogo: true,
       title: (
-        <p
+        <div
           className={`max-w-md sm:text-xl text-base uppercase font-normal leading-7 md:-leading-10 `}
         >
           Faça seu diagnóstico de{" "}
@@ -131,7 +131,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
             DEPENDÊNCIA EMOCIONAL
           </span>{" "}
           gratuito
-        </p>
+        </div>
       ),
       text: (
         <p className={`sm:text-xl text-base`}>
@@ -145,7 +145,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
       isPicture: false,
       isLogo: true,
       title: (
-        <p
+        <div
           className={`md:max-w-md w-full max-w-[450px] mx-auto md:mx-0 md:text-[40px]/10 text-[22px] font-normal leading-7 md:-leading-10 font-darker-grotesque flex flex-col md:gap-6 gap-2`}
         >
           <span className="text-[#FDC104] text-xl font-darker-grotesque uppercase">
@@ -155,7 +155,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
             DESCUBRA COMO SE LIVRAR DO QUE TE IMPEDIU DE FAZER O QUE VOCÊ
             GOSTARIA DE TER FEITO EM 2024, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
           </p>
-        </p>
+        </div>
       ),
       text: (
         <div
@@ -527,7 +527,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                 </span>
               </button>
             </div>
-            <p className="mb-4 sm:mb-8 sm:mt-6 md:mt-2 mt-4 flex items-center md:justify-start justify-center md:text-left text-center md:max-w-[486px] max-w-full md:px-0 px-4">
+            <div className="mb-4 sm:mb-8 sm:mt-6 md:mt-2 mt-4 flex items-center md:justify-start justify-center md:text-left text-center md:max-w-[486px] max-w-full md:px-0 px-4">
               {redLine ? (
                 <span>{redLine}</span>
               ) : (
@@ -540,7 +540,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                   na saúde.
                 </>
               )}
-            </p>
+            </div>
           </div>
         </div>
       </section>

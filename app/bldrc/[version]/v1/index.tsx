@@ -123,7 +123,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
       isPicture: false,
       isLogo: true,
       title: (
-        <p
+        <div
           className={`max-w-md sm:text-xl text-base uppercase font-normal leading-7 md:-leading-10 `}
         >
           Faça seu diagnóstico de{" "}
@@ -131,7 +131,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
             DEPENDÊNCIA EMOCIONAL
           </span>{" "}
           gratuito
-        </p>
+        </div>
       ),
       text: (
         <p className={`sm:text-xl text-base`}>
@@ -145,7 +145,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
       isPicture: false,
       isLogo: true,
       title: (
-        <p
+        <div
           className={`md:max-w-md w-full max-w-[450px] mx-auto md:mx-0 md:text-3xl/10 text-[22px] font-normal leading-7 md:-leading-10 font-battambang flex flex-col md:gap-6 gap-2`}
         >
           <span className="text-[#F5C43F] md:text-[22px] text-base font-bold">
@@ -155,7 +155,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
             DESCUBRA COMO SE LIVRAR DO QUE TE IMPEDIU DE FAZER O QUE VOCÊ
             GOSTARIA DE TER FEITO EM 2024, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
           </p>
-        </p>
+        </div>
       ),
       text: (
         <p className={`font-mulish max-w-[450px] mx-auto md:mx-0 text-[#F4F0E1] md:text-2xl text-[20px]/6`}>
@@ -514,7 +514,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
               )}
             </div>
 
-            <p className="mb-4 sm:mb-8 sm:mt-6 mt-2 flex items-center justify-center md:text-left text-center md:max-w-[486px] max-w-full px-4">
+            <div className="mb-4 sm:mb-8 sm:mt-6 mt-2 flex items-center justify-center md:text-left text-center md:max-w-[486px] max-w-full px-4">
               {redLine ? (
                 <span>{redLine}</span>
               ) : (
@@ -527,7 +527,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
                   na saúde.
                 </>
               )}
-            </p>
+            </div>
             <form
               onSubmit={handleSubmit}
               id="cadastro"
