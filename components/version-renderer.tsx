@@ -33,6 +33,10 @@ export function VersionRenderer({ version, theme, slug }: VersionRendererProps) 
   if (renderVersion) {
     return renderVersion({ model, theme });
   }
+
+  // Evita "página em branco" quando a versão não existe/está malformada.
+  // Se quiser, você pode trocar por um redirect explícito para uma versão padrão.
+  return withSplashV4(<Formv1 theme={theme ?? "1"} />);
 }
 
 export default VersionRenderer;

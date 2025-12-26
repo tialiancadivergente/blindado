@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
-import { text } from "stream/consumers";
 import { getTagIdByTemperature, getTagByTemperatureOro } from "@/lib/temperature-utils";
 
 export default function Formv10() {
