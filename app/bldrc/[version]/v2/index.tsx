@@ -152,7 +152,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
           </span>{" "}
           <p className="font-extrabold text-white">
             DESCUBRA COMO SE LIVRAR DO QUE TE IMPEDIU DE FAZER O QUE VOCÊ
-            GOSTARIA DE TER FEITO EM 2024, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
+            GOSTARIA DE TER FEITO EM 2025, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
           </p>
         </div>
       ),

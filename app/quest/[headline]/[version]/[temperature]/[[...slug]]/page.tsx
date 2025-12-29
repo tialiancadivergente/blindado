@@ -9,6 +9,7 @@ import { useParams, useSearchParams } from "next/navigation";
 import TagManager from "react-gtm-module";
 import { questions } from "@/lib/questions";
 import Footer from "@/components/footer";
+import { getTagIdByTemperature } from "@/lib/temperature-utils";
 
 export default function Quiz({ params }: { params: { form: string } }) {
   const searchParams = useSearchParams();
@@ -32,6 +33,7 @@ export default function Quiz({ params }: { params: { form: string } }) {
   const [weightsV2, setWeightsV2] = useState<Record<number, number>>({});
   const [totalScoreV2, setTotalScoreV2] = useState(0);
   const [hasSent, setHasSent] = useState(false);
+  const [tagId, setTagId] = useState<number | null>(null);
 
 	const mapTagSendFlow = useCallback(() => ({
 		f: "https://redirects.aliancadivergente.com.br/oro-pages-f",
@@ -81,6 +83,9 @@ export default function Quiz({ params }: { params: { form: string } }) {
       setTipo(tipoValue as string);
       setVersao(versaoValue as string);
       setTemperatura(temperaturaValue as string);
+
+      const calculatedTagId = getTagIdByTemperature(temperaturaValue as string);
+      setTagId(calculatedTagId);
     }
   }, [_params]);
 
@@ -176,6 +181,7 @@ export default function Quiz({ params }: { params: { form: string } }) {
         detailedAnswers: detailedAnswers,
         domain: domain,
         launch: launch,
+        tagId: tagId,
         utm_source: searchParams.get("utm_source") || "",
         utm_medium: searchParams.get("utm_medium") || "",
         utm_campaign: searchParams.get("utm_campaign") || "",

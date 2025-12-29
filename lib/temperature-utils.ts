@@ -1,17 +1,17 @@
 export const TEMPERATURE_TAG_MAP: Record<string, number> = {
-  'q': 120095,
-  'm': 120096,
-  'f': 120097,
-  'o': 120098,
-  'org': 120098
+  'q': 120466,
+  'm': 120470,
+  'f': 120465,
+  'o': 120467,
+  'org': 120467
 };
 
 export const TEMPERATURE_TAG_MAP_ORO: Record<string, string> = {
-  'q': '[ORO][NOV25] Quente',
-  'm': '[ORO][NOV25] Morno',
-  'f': '[ORO][NOV25] Frio',
-  'o': '[ORO][NOV25] Organico',
-  'org': '[ORO][NOV25] Organico'
+  'q': '[BLD] [JAN26] Quente',
+  'm': '[BLD] [JAN26] Morno',
+  'f': '[BLD] [JAN26] Frio',
+  'o': '[BLD] [JAN26] Organico',
+  'org': '[BLD] [JAN26] Organico'
 };
 
 /**

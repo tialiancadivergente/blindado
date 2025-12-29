@@ -36,7 +36,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
   const [themeValue, setThemeValue] = useState<string>(theme);
   const fullUrl = Object.values(params).flat().join("/");
 
-  const launch = "[ORO][NOV25]";
+  const launch = "[BLD][JAN26]";
 
   const handleClick = () => {
     setIsSubmitting(true)
@@ -152,7 +152,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
           </span>{" "}
           <p className="font-bold text-white">
             DESCUBRA COMO SE LIVRAR DO QUE TE IMPEDIU DE FAZER O QUE VOCÊ
-            GOSTARIA DE TER FEITO EM 2024, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
+            GOSTARIA DE TER FEITO EM 2025, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
           </p>
         </div>
       ),
