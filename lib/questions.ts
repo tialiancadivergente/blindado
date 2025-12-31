@@ -137,7 +137,7 @@ export const questions: Question[] = [
   },
   {
     id: 13,
-    question: "O que você mais espera mudar ou resolver participando d'O Resgate dos Otimistas?",
+    question: "O que você mais espera mudar ou resolver participando do 2026 Blindado?",
     type: "open",
     placeholder: "Digite aqui...",
     options: [],
