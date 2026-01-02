@@ -36,10 +36,10 @@ export default function Quiz({ params }: { params: { form: string } }) {
   const [tagId, setTagId] = useState<number | null>(null);
 
 	const mapTagSendFlow = useCallback(() => ({
-		f: "https://redirects.aliancadivergente.com.br/oro-pages-f",
-    org: "https://redirects.aliancadivergente.com.br/oro-pages-org",
-    m: "https://redirects.aliancadivergente.com.br/oro-pages-m",
-    q: "https://redirects.aliancadivergente.com.br/oro-pages-q",
+		f: "https://redirects.aliancadivergente.com.br/2026-blindado-wpp-f",
+    org: "https://redirects.aliancadivergente.com.br/2026-blindado-wpp-org",
+    m: "https://redirects.aliancadivergente.com.br/2026-blindado-wpp-m",
+    q: "https://redirects.aliancadivergente.com.br/2026-blindado-wpp-q",
 	}), [_params.slug])();
 
   const getWhatsappUrl = () => {
@@ -51,7 +51,7 @@ export default function Quiz({ params }: { params: { form: string } }) {
     return mapTagSendFlow[resolvedKey as keyof typeof mapTagSendFlow] || mapTagSendFlow["f"];
   };
 
-  const launch = "[ORO][NOV25]";
+  const launch = "[BLD] [JAN26]";
 
   // Capturar o domínio da página
   useEffect(() => {

@@ -625,27 +625,60 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
               Líder e Idealizador da Aliança Divergente
             </p>
             <div className="text-[#07242C] text-base font-normal font-inter space-y-8">
-              <p>
-                ESCRITOR, PESQUISADOR, TERAPEUTA E MENTOR. AUTOR DA TEORIA DA
-                PERMISSÃO, LÍDER DA ALIANÇA DIVERGENTE E CRIADOR DO MÉTODO O
-                CORPO EXPLICA.
+            <p>
+                “Eu não dei certo na vida ensinando as pessoas a serem
+                bem-sucedidas. Eu dei certo antes. Mas logo percebi que existiam
+                muitas pessoas vivendo como eu vivia antes — se esforçando,
+                acreditando, tentando… sem resultado. Foi quando eu decidi fazer
+                por elas o que eu tinha conseguido fazer por mim.” — Elton
+                Euler.
               </p>
+
               <p>
-                Fundador e mentor da Aliança Divergente, com mais de 130 mil
-                clientes (Aliados) em 60 países, é também criador do método O
-                Corpo Explica, a maior escola de análise corporal do mundo.
+                Elton é um dos grandes exemplos de persistência e superação da
+                atualidade. Alguém que conhece de perto a frustração de se
+                dedicar ao máximo e ainda assim não ver a vida avançar.
               </p>
+
               <p>
-                Após 17 falências, tornou-se referência global em
-                desenvolvimento humano.
+                Antes de se tornar multimilionário e uma das principais
+                referências em desenvolvimento humano no Brasil, Elton quebrou
+                17 vezes, chegou a acreditar que o sucesso não era para ele e
+                até desistiu de empreender. Tentou levar uma “vida normal”,
+                buscar um emprego, até perceber que aquilo não pagaria suas
+                dívidas, suas contas — nem realizaria seus sonhos.
               </p>
+
               <p>
-                Elton é Dr. Honoris Causa, escritor, terapeuta, pai de cinco
-                filhos e uma das lideranças mais respeitadas da área no Brasil.
+                Foi então que decidiu voltar para os negócios. Mas, dessa vez,
+                consciente de que só esforço não seria suficiente. Ele precisava
+                descobrir o que realmente estava faltando.
               </p>
+
               <p>
-                Sua meta é clara: alcançar 1 milhão de Aliados ativos até 2030 e
-                trazer o primeiro Nobel para o país.
+                Quando encontrou essa resposta, saiu das dívidas e se tornou
+                milionário em menos de 3 anos. Desde então, já apoiou mais de
+                150 mil pessoas em 40 países, por meio de técnicas e métodos que
+                entrega com uma clareza única — e que transformam a forma como
+                as pessoas veem a própria vida e os resultados que constroem.
+              </p>
+
+              <p>
+                Terapeuta, empresário, escritor e pesquisador, Elton tem a
+                habilidade rara de te mostrar o que ninguém conseguiu e te fazer
+                entender, de forma simples e direta, o que precisa mudar para
+                2026 não ser apenas mais um ano.
+              </p>
+
+              <p>
+                Se você vem se esforçando, tentando mudar e mesmo assim sente
+                que está sempre no mesmo lugar, talvez tudo o que você precise
+                hoje seja exatamente isso: um encontro com ele no Blindado 2026.
+              </p>
+
+              <p>
+                Você pode ser o próximo a romper esse ciclo e construir uma
+                virada real. Não perca essa oportunidade.
               </p>
             </div>
             <button

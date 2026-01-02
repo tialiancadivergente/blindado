@@ -511,7 +511,63 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                 </>
               )}
             </div>
-            <div className="px-4 md:px-0">
+            <form
+              onSubmit={handleSubmit}
+              id="cadastro"
+              name={launch}
+              className={`space-y-4 md:max-w-[486px] max-w-[420px] mx-auto md:mx-0 px-4 md:px-0 mt-4`}
+            >
+              <div>
+                <input
+                  type="email"
+                  id="form-field-email"
+                  placeholder="Seu melhor e-mail"
+                  className={`w-full px-4 py-3 bg-[#006D7180] text-[#D3CAC0] placeholder:text-[#D3CAC0] font-mulish`}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 sm:flex hidden items-center pointer-events-none">
+                  <Phone size={18} className="text-[#D3CAC0]" />
+                </div>
+                <div className="flex">
+                  <select
+                    className={`py-3 sm:pl-10 pl-0 sm:pr-2 pr-1 bg-[#006D7180] text-[#D3CAC0] focus:ring-0 focus:outline-none font-mulish`}
+                    value={ddi}
+                    onChange={(e) => setDdi(e.target.value)}
+                  >
+                    <option value="+55">🇧🇷 +55</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+351">🇵🇹 +351</option>
+                    <option value="+34">🇪🇸 +34</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+39">🇮🇹 +39</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+7">🇷🇺 +7</option>
+                    <option value="+52">🇲🇽 +52</option>
+                    <option value="+54">🇦🇷 +54</option>
+                    <option value="+56">🇨🇱 +56</option>
+                    <option value="+57">🇨🇴 +57</option>
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="Seu WhatsApp"
+                    id="form-field-telefone"
+                    className={`flex-1 sm:px-4 px-1 py-3 bg-[#006D7180] text-[#D3CAC0] focus:outline-none placeholder:text-[#D3CAC0] font-mulish`}
+                    value={whatsapp}
+                    onChange={handleChange}
+                    name="whatsapp"
+                    required
+                  />
+                </div>
+              </div>
+
               <button
                 type="submit"
                 className="w-full max-w-[486px] md:mt-9 mt-6 rounded-xl text-[#FFF] font-bold font-battambang md:py-5 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
@@ -520,12 +576,17 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                     "linear-gradient(180deg, #FDC104 0%, #D2A106 100%)",
                   boxShadow: "0px 4px 40px 0px #D2A106",
                 }}
+                disabled={isSubmitting}
               >
                 <span className="text-black text-[18px] uppercase font-extrabold font-darker-grotesque">
-                  Quero me Inscrever
+                  {isSubmitting
+                    ? "PROCESSANDO..."
+                    : success
+                    ? "SUCESSO! AGUARDE..."
+                    : "Quero me Inscrever"}
                 </span>
               </button>
-            </div>
+            </form>
             <div className="mb-4 sm:mb-8 sm:mt-6 md:mt-2 mt-4 flex items-center md:justify-start justify-center md:text-left text-center md:max-w-[486px] max-w-full md:px-0 px-4">
               {redLine ? (
                 <span>{redLine}</span>
@@ -547,7 +608,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
         id="elton-section"
         className="flex flex-col items-center md:px-8 px-4 md:py-8 pt-8 justify-start overflow-hidden z-0 bg-[#BEFAFB] bg-top sm:bg-top md:bg-cover bg-no-repeat w-full h-full md:min-h-[1142px] font-darker-grotesque"
       >
-        <div className="container mx-auto px-4 md:pb-10 pb-2 relative lg:w-[1080px] w-full flex flex-col items-end justify-center mt-[420px]">
+        <div className="container mx-auto px-4 md:pb-10 pb-2 relative lg:w-[1080px] w-full flex flex-col items-end justify-center md:mt-[0px] mt-[420px]">
           <div className="md:w-1/2 w-full flex flex-col items-start justify-center md:mt-12 mt-0 gap-4">
             <p className="text-[#006D71] text-[44px]/5 font-bold">
               Elton Euler:
@@ -557,26 +618,59 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
             </p>
             <div className="text-[#07242C] text-base font-normal font-inter space-y-4">
               <p>
-                ESCRITOR, PESQUISADOR, TERAPEUTA E MENTOR. AUTOR DA TEORIA DA
-                PERMISSÃO, LÍDER DA ALIANÇA DIVERGENTE E CRIADOR DO MÉTODO O
-                CORPO EXPLICA.
+                “Eu não dei certo na vida ensinando as pessoas a serem
+                bem-sucedidas. Eu dei certo antes. Mas logo percebi que existiam
+                muitas pessoas vivendo como eu vivia antes — se esforçando,
+                acreditando, tentando… sem resultado. Foi quando eu decidi fazer
+                por elas o que eu tinha conseguido fazer por mim.” — Elton
+                Euler.
               </p>
+
               <p>
-                Fundador e mentor da Aliança Divergente, com mais de 130 mil
-                clientes (Aliados) em 60 países, é também criador do método O
-                Corpo Explica, a maior escola de análise corporal do mundo.
+                Elton é um dos grandes exemplos de persistência e superação da
+                atualidade. Alguém que conhece de perto a frustração de se
+                dedicar ao máximo e ainda assim não ver a vida avançar.
               </p>
+
               <p>
-                Após 17 falências, tornou-se referência global em
-                desenvolvimento humano.
+                Antes de se tornar multimilionário e uma das principais
+                referências em desenvolvimento humano no Brasil, Elton quebrou
+                17 vezes, chegou a acreditar que o sucesso não era para ele e
+                até desistiu de empreender. Tentou levar uma “vida normal”,
+                buscar um emprego, até perceber que aquilo não pagaria suas
+                dívidas, suas contas — nem realizaria seus sonhos.
               </p>
+
               <p>
-                Elton é Dr. Honoris Causa, escritor, terapeuta, pai de cinco
-                filhos e uma das lideranças mais respeitadas da área no Brasil.
+                Foi então que decidiu voltar para os negócios. Mas, dessa vez,
+                consciente de que só esforço não seria suficiente. Ele precisava
+                descobrir o que realmente estava faltando.
               </p>
+
               <p>
-                Sua meta é clara: alcançar 1 milhão de Aliados ativos até 2030 e
-                trazer o primeiro Nobel para o país.
+                Quando encontrou essa resposta, saiu das dívidas e se tornou
+                milionário em menos de 3 anos. Desde então, já apoiou mais de
+                150 mil pessoas em 40 países, por meio de técnicas e métodos que
+                entrega com uma clareza única — e que transformam a forma como
+                as pessoas veem a própria vida e os resultados que constroem.
+              </p>
+
+              <p>
+                Terapeuta, empresário, escritor e pesquisador, Elton tem a
+                habilidade rara de te mostrar o que ninguém conseguiu e te fazer
+                entender, de forma simples e direta, o que precisa mudar para
+                2026 não ser apenas mais um ano.
+              </p>
+
+              <p>
+                Se você vem se esforçando, tentando mudar e mesmo assim sente
+                que está sempre no mesmo lugar, talvez tudo o que você precise
+                hoje seja exatamente isso: um encontro com ele no Blindado 2026.
+              </p>
+
+              <p>
+                Você pode ser o próximo a romper esse ciclo e construir uma
+                virada real. Não perca essa oportunidade.
               </p>
             </div>
             <button
