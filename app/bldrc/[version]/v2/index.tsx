@@ -522,7 +522,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                   type="email"
                   id="form-field-email"
                   placeholder="Seu melhor e-mail"
-                  className={`w-full px-4 py-3 bg-[#006D7180] text-[#D3CAC0] placeholder:text-[#D3CAC0] font-mulish`}
+                  className={`w-full px-4 py-3 bg-[#d2cabf] text-[#202a21] placeholder:text-[#202a21] font-mulish`}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -531,11 +531,11 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
 
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 sm:flex hidden items-center pointer-events-none">
-                  <Phone size={18} className="text-[#D3CAC0]" />
+                  <Phone size={18} className="text-[#202a21]" />
                 </div>
                 <div className="flex">
                   <select
-                    className={`py-3 sm:pl-10 pl-0 sm:pr-2 pr-1 bg-[#006D7180] text-[#D3CAC0] focus:ring-0 focus:outline-none font-mulish`}
+                    className={`py-3 sm:pl-10 pl-0 sm:pr-2 pr-1 bg-[#d2cabf] text-[#202a21] focus:ring-0 focus:outline-none font-mulish`}
                     value={ddi}
                     onChange={(e) => setDdi(e.target.value)}
                   >
@@ -559,7 +559,7 @@ export default function Formv2({ theme = "1" }: { theme?: string }) {
                     type="tel"
                     placeholder="Seu WhatsApp"
                     id="form-field-telefone"
-                    className={`flex-1 sm:px-4 px-1 py-3 bg-[#006D7180] text-[#D3CAC0] focus:outline-none placeholder:text-[#D3CAC0] font-mulish`}
+                    className={`flex-1 sm:px-4 px-1 py-3 bg-[#d2cabf] text-[#202a21] focus:outline-none placeholder:text-[#202a21] font-mulish`}
                     value={whatsapp}
                     onChange={handleChange}
                     name="whatsapp"

@@ -7,8 +7,16 @@ import Image from "next/image";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { getTagIdByTemperature } from "@/lib/temperature-utils";
 import Footer from "@/components/footer";
+import { CycleRepeats } from "@/app/components/v3/cycle-repeats";
+import { TheWarning } from "@/app/components/v3/the-warning";
+import { FivePillars } from "@/app/components/v3/five-pillars";
+import { ThreeFreeClasses } from "@/app/components/v3/three-free-classes";
+import { WhoIsItFor } from "@/app/components/v3/who-is-it-for";
+import { DecisionHands } from "@/app/components/v3/decision-hands";
+import { CheckOutAllies } from "@/app/components/v3/check-out-allies";
+import EltonEuler from "@/app/components/v3/elton-euler";
 
-export default function Formv1({ theme = "2" }: { theme?: string }) {
+export default function Formv3({ theme = "1" }: { theme?: string }) {
   const params = useParams();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -39,19 +47,19 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
   const launch = "[BLD][JAN26]";
 
   const handleClick = () => {
-    setIsSubmitting(true)
-    
+    setIsSubmitting(true);
+
     // Pequeno atraso para garantir que a página tenha tempo de renderizar completamente
     setTimeout(() => {
-      const element = document.getElementById("hero-section")
+      const element = document.getElementById("hero-section");
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
+        element.scrollIntoView({ behavior: "smooth" });
       } else {
-        console.error("Elemento com id 'cadastro' não encontrado")
+        console.error("Elemento com id 'cadastro' não encontrado");
       }
-      setIsSubmitting(false)
-    }, 100)
-  }
+      setIsSubmitting(false);
+    }, 100);
+  };
 
   // Mapeamento do theme para a imagem de background
   const themeBackgroundMap: Record<string, string> = {
@@ -147,17 +155,19 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
         <div
           className={`md:max-w-md w-full max-w-[450px] mx-auto md:mx-0 md:text-3xl/10 text-[22px] font-normal leading-7 md:-leading-10 font-battambang flex flex-col md:gap-6 gap-2`}
         >
-          <span className="text-[#F5C43F] md:text-[22px] text-base font-bold">
-            Workshop prático, online e gratuito
-          </span>{" "}
           <p className="font-bold text-white">
-            DESCUBRA COMO SE LIVRAR DO QUE TE IMPEDIU DE FAZER O QUE VOCÊ
-            GOSTARIA DE TER FEITO EM 2025, MAS NÃO FEZ, MESMO SABENDO COMO FAZER
+            <span className="text-[#F5C43F]">
+              CHEGA DE COMEÇAR O ANO CHEIO DE PLANOS E TERMINAR COM FRUSTRAÇÃO.
+            </span>{" "}
+            PREPARE-SE PARA BLINDAR SUA VIDA FINANCEIRA, EMOCIONAL E FÍSICA EM
+            2025 – E NUNCA MAIS FICAR TRAVADO NO MESMO LUGAR.
           </p>
         </div>
       ),
       text: (
-        <p className={`font-mulish max-w-[450px] mx-auto md:mx-0 text-[#F4F0E1] md:text-2xl text-[20px]/6`}>
+        <p
+          className={`font-mulish max-w-[450px] mx-auto md:mx-0 text-[#F4F0E1] md:text-2xl text-[20px]/6`}
+        >
           Se você não aplicar esse programa, seu ano novo vai ser roubado de
           novo!
         </p>
@@ -433,15 +443,9 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
           #hero-section {
             background-image: url('${backgroundImage}');
           }
-          #elton-section {
-            background-image: url('/images/bldrc/bg-blindado-elton-euler.webp');
-          }
           @media (max-width: 767px) {
             #hero-section {
               background-image: url('/images/bldrc/bg-blindado-mobile.webp');
-            }
-            #elton-section {
-              background-image: none;
             }
           }
         `,
@@ -476,8 +480,11 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
                     height: "auto",
                   }}
                 />
-                <span className="hidden md:block">
+                <span className="hidden md:block font-battambang">
                   Dias 19, 20 e 21 de Janeiro de 2026
+                  <p className="text-[#F5C43F] text-base font-bold mt-1">
+                    Workshop prático, online e gratuito
+                  </p>
                 </span>
               </div>
             )}
@@ -538,7 +545,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
                   type="email"
                   id="form-field-email"
                   placeholder="Seu melhor e-mail"
-                  className={`w-full px-4 py-3 bg-[#d2cabf] text-[#202a21] placeholder:text-[#202a21] font-mulish`}
+                  className={`w-full px-4 py-3 bg-[#d2cabf] border border-[#EDEDED] rounded-xl text-[#202a21] placeholder:text-[#202a21] font-mulish`}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -551,7 +558,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
                 </div>
                 <div className="flex">
                   <select
-                    className={`py-3 sm:pl-10 pl-0 sm:pr-2 pr-1 bg-[#d2cabf] text-[#202a21] focus:ring-0 focus:outline-none font-mulish`}
+                    className={`py-3 sm:pl-10 pl-0 sm:pr-2 pr-1 bg-[#d2cabf] border border-[#EDEDED] rounded-l-xl rounded-r-none border-r-0 text-[#202a21] focus:ring-0 focus:outline-none font-mulish`}
                     value={ddi}
                     onChange={(e) => setDdi(e.target.value)}
                   >
@@ -575,7 +582,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
                     type="tel"
                     placeholder="Seu WhatsApp"
                     id="form-field-telefone"
-                    className={`flex-1 sm:px-4 px-1 py-3 bg-[#d2cabf] text-[#202a21] focus:outline-none placeholder:text-[#202a21] font-mulish`}
+                    className={`flex-1 sm:px-4 px-1 py-3 bg-[#d2cabf] border border-[#EDEDED] rounded-r-xl border-l-0 text-[#202a21] focus:outline-none placeholder:text-[#202a21] font-mulish`}
                     value={whatsapp}
                     onChange={handleChange}
                     name="whatsapp"
@@ -586,7 +593,7 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
 
               <button
                 type="submit"
-                className="w-full bg-[#C0964B] text-[#FFF] font-bold font-battambang md:py-5 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
+                className="w-full bg-[#C0964B] text-[#FFF] rounded-xl font-bold font-battambang md:py-3 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
                 disabled={isSubmitting}
               >
                 <span>
@@ -612,93 +619,14 @@ export default function Formv1({ theme = "2" }: { theme?: string }) {
           )}
         </div>
       </section>
-      <section
-        id="elton-section"
-        className="flex flex-col items-center md:px-8 px-4 md:py-8 pt-8 justify-start overflow-hidden z-0 bg-[#BEFAFB] bg-top sm:bg-top bg-cover bg-no-repeat w-full h-full md:min-h-[1057px] font-battambang"
-      >        
-        <div className="container mx-auto px-4 md:pb-10 pb-2 relative lg:w-[1080px] w-full flex flex-col items-end justify-center">
-          <div className="md:w-1/2 w-full flex flex-col items-start justify-center md:mt-12 mt-0 gap-6">
-            <p className="text-[#006D71] text-[44px] font-bold font-battambang">
-              Elton Euler:
-            </p>
-            <p className="text-[#07242C] text-[22px] font-bold font-battambang">
-              Líder e Idealizador da Aliança Divergente
-            </p>
-            <div className="text-[#07242C] text-base font-normal font-inter space-y-8">
-            <p>
-                “Eu não dei certo na vida ensinando as pessoas a serem
-                bem-sucedidas. Eu dei certo antes. Mas logo percebi que existiam
-                muitas pessoas vivendo como eu vivia antes — se esforçando,
-                acreditando, tentando… sem resultado. Foi quando eu decidi fazer
-                por elas o que eu tinha conseguido fazer por mim.” — Elton
-                Euler.
-              </p>
-
-              <p>
-                Elton é um dos grandes exemplos de persistência e superação da
-                atualidade. Alguém que conhece de perto a frustração de se
-                dedicar ao máximo e ainda assim não ver a vida avançar.
-              </p>
-
-              <p>
-                Antes de se tornar multimilionário e uma das principais
-                referências em desenvolvimento humano no Brasil, Elton quebrou
-                17 vezes, chegou a acreditar que o sucesso não era para ele e
-                até desistiu de empreender. Tentou levar uma “vida normal”,
-                buscar um emprego, até perceber que aquilo não pagaria suas
-                dívidas, suas contas — nem realizaria seus sonhos.
-              </p>
-
-              <p>
-                Foi então que decidiu voltar para os negócios. Mas, dessa vez,
-                consciente de que só esforço não seria suficiente. Ele precisava
-                descobrir o que realmente estava faltando.
-              </p>
-
-              <p>
-                Quando encontrou essa resposta, saiu das dívidas e se tornou
-                milionário em menos de 3 anos. Desde então, já apoiou mais de
-                150 mil pessoas em 40 países, por meio de técnicas e métodos que
-                entrega com uma clareza única — e que transformam a forma como
-                as pessoas veem a própria vida e os resultados que constroem.
-              </p>
-
-              <p>
-                Terapeuta, empresário, escritor e pesquisador, Elton tem a
-                habilidade rara de te mostrar o que ninguém conseguiu e te fazer
-                entender, de forma simples e direta, o que precisa mudar para
-                2026 não ser apenas mais um ano.
-              </p>
-
-              <p>
-                Se você vem se esforçando, tentando mudar e mesmo assim sente
-                que está sempre no mesmo lugar, talvez tudo o que você precise
-                hoje seja exatamente isso: um encontro com ele no Blindado 2026.
-              </p>
-
-              <p>
-                Você pode ser o próximo a romper esse ciclo e construir uma
-                virada real. Não perca essa oportunidade.
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={handleClick}
-              className="w-full bg-[#C0964B] text-[#FFF] font-bold font-battambang md:py-5 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
-            >
-              <span>Destravar Acesso</span>
-            </button>
-          </div>
-        </div>
-        <div className="md:hidden block">
-          <Image
-            src="/images/bldrc/bg-blindado-elton-euler-mobile.webp"
-            alt="Picture"
-            width={470}
-            height={577}
-          />
-        </div>
-      </section>
+      <CycleRepeats />
+      <TheWarning />
+      <FivePillars />
+      <ThreeFreeClasses />
+      <WhoIsItFor />
+      <DecisionHands />
+      <CheckOutAllies />
+      <EltonEuler />
       <Footer />
     </div>
   );

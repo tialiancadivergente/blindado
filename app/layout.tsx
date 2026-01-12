@@ -42,7 +42,7 @@ const battambang = Battambang({
   preload: false,
   display: 'swap',
   variable: '--font-battambang',
-  weight: ['400'],
+  weight: ['300', '400', '700', '900'],
 })
 
 const inter = Inter({

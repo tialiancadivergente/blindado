@@ -4,6 +4,7 @@ import type { ReactElement, ReactNode } from "react";
 import SplashScreenV4 from "@/app/components/SplashScreen/SplashScreenV4";
 import Formv1 from "@/app/bldrc/[version]/v1";
 import Formv2 from "@/app/bldrc/[version]/v2";
+import Formv3 from "@/app/bldrc/[version]/v3";
 
 type RenderContext = {
   model: string | null;
@@ -24,6 +25,7 @@ const renderers: Record<string, Renderer> = {
   v1: ({ model, theme }) =>
     withSplashV4(model === "2" ? <Formv1 /> : <Formv1 theme={theme ?? ""} />),
   v2: () => withSplashV4(<Formv2 />),
+  v3: () => withSplashV4(<Formv3 />),
 };
 
 export function VersionRenderer({ version, theme, slug }: VersionRendererProps) {
