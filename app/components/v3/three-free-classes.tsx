@@ -56,7 +56,7 @@ export function ThreeFreeClasses() {
           03 aulas gratuitas.
         </p>
       </div>
-      <div className="mt-10 flex flex-row gap-4">
+      <div className="mt-10 flex md:flex-row flex-col gap-4">
         {infoCard.map((item, index) => (
           <div
             key={index}

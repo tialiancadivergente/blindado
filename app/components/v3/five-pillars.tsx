@@ -76,7 +76,7 @@ export function FivePillars() {
     <section className="flex flex-col items-center md:px-8 px-4 md:py-8 justify-start overflow-hidden z-0 bg-[#012224] bg-center bg-cover bg-no-repeat w-full h-full md:min-h-[561px] font-battambang">
       <div className="lg:container text-white mx-auto md:py-12 pb-10 relative lg:w-[1080px] w-full text-center">
         <div className="w-full h-[1px] bg-gradient-to-r from-[#99999900] via-white to-[#99999900] mb-10" />
-        <h2 className="text-[#FBC941] text-[22px] font-bold font-battambang">
+        <h2 className="text-[#FBC941] md:text-[22px] text-[20px] font-bold font-battambang">
           A boa notícia? Isso pode mudar.
         </h2>
         <p className="text-white text-[32px] font-bold font-battambang mt-5">
@@ -85,7 +85,7 @@ export function FivePillars() {
         <p className="text-white text-[32px] font-bold font-battambang">
           2025 BLINDADO, VOCÊ VAI:
         </p>
-        <div className="flex flex-row justify-between gap-4">
+        <div className="flex md:flex-row flex-col md:justify-between justify-center gap-4 max-w-[200px] md:max-w-none mx-auto">
           {pillars.map((pillar, index) => (
             <div key={index} className="flex flex-col min-w-[156px] flex-1">
               <p

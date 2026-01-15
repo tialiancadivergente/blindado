@@ -13,15 +13,15 @@ const reasons = [
 
 export function WhoIsItFor() {
   return (
-    <section className="flex flex-col items-center md:px-8 px-4 md:pt-14 md:pb-0 justify-start overflow-hidden z-0 bg-[#012224] bg-center bg-cover bg-no-repeat w-full h-full md:min-h-[561px] font-battambang">
+    <section className="flex flex-col items-center md:px-8 px-4 pt-14 md:pb-0 justify-start overflow-hidden z-0 bg-[#012224] bg-center bg-cover bg-no-repeat w-full h-full md:min-h-[561px] font-battambang">
       <div
         className={`lg:container text-white mx-auto lg:w-[1080px] w-full text-center`}
       >
-        <h2 className="text-white text-[32px] font-bold font-battambang uppercase">
+        <h2 className="text-white md:text-[32px] text-[28px] md:text-center text-left font-bold font-battambang uppercase">
           PARA QUEM É O 2025 BLINDADO?
         </h2>
         <div className="mt-6">
-          <p className="text-[#FBC941] text-[20px] font-bold font-battambang">
+          <p className="text-[#FBC941] text-[20px] font-bold md:text-center text-left font-battambang">
             Este evento é para você que:
           </p>
           <div className="mt-5 max-w-[500px] flex flex-col gap-2 items-center justify-center mx-auto">

@@ -45,7 +45,7 @@ export default function EltonEuler() {
           }
           @media (max-width: 767px) {
             #elton-euler-section {
-              background-image: url('/images/bldrc/v2/bg-blindado-elton-euler-mobile.webp');
+              background-image: url('/images/bldrc/v3/bg-elton-euler-mobile.webp');
             }
           }
         `,
@@ -53,12 +53,15 @@ export default function EltonEuler() {
       />
       <section
         id="elton-euler-section"
-        className="flex flex-col items-center md:px-8 px-4 md:py-8 pt-8 justify-start overflow-hidden z-0 bg-[#012224] bg-top sm:bg-top md:bg-cover bg-no-repeat w-full h-full md:min-h-[900px] font-battambang"
+        className="flex flex-col items-center md:px-8 px-4 md:py-8 pb-[470px] pt-8 justify-start overflow-hidden z-0 md:bg-[#012224] bg-[#BEFAFB] bg-bottom md:bg-top md:bg-cover bg-no-repeat w-full h-full md:min-h-[900px] font-battambang"
       >
-        <div className="container mx-auto px-4 md:pb-10 pb-2 relative lg:w-[1080px] w-full flex flex-col items-end justify-center md:mt-[0px] mt-[420px]">
+        <div className="container mx-auto px-4 md:pb-10 pb-2 relative lg:w-[1080px] w-full flex flex-col items-end justify-center md:mt-[0px]">
           <div className="md:w-1/2 w-full flex flex-col items-start justify-center md:mt-12 mt-0 gap-4">
-            <p className="text-[#07242C] text-[32px] font-bold">
+            <p className="text-[#07242C] text-[32px] font-bold md:block hidden">
               QUEM VAI SER O SEU <br /> MENTOR NESSA JORNADA?
+            </p>
+            <p className="text-[#07242C] text-[28px] font-bold md:hidden block">
+              QUEM VAI SER O SEU MENTOR NESSA JORNADA?
             </p>
             <p className="text-[#006D71] text-[22px] font-bold mb-4">
               <span className="font-extrabold">Elton Euler</span> - Líder e
@@ -96,7 +99,8 @@ export default function EltonEuler() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto py-8 flex gap-20 items-center justify-center bg-[url('/images/bldrc/v3/bg-section-el.webp')] bg-center bg-cover bg-no-repeat w-full max-w-[972px] h-full md:min-h-[256px] -mt-14">
+
+      <section className="md:flex hidden container mx-auto py-8 gap-20 items-center justify-center bg-[url('/images/bldrc/v3/bg-section-el.webp')] bg-center bg-cover bg-no-repeat w-full max-w-[972px] h-full md:min-h-[256px] -mt-14">
         <div className="max-w-[391px] text-white text-[22px] font-extrabold font-battambang">
           <p>
             Não perca a chance de{" "}
@@ -108,6 +112,32 @@ export default function EltonEuler() {
           </p>
         </div>
         <div className="max-w-[258px]">
+          <p className="text-white text-[14px] font-normal text-center mb-5 font-battambang">Clique no botão abaixo e inscreva-se gratuitamente agora!</p>
+          <button
+            className="w-full text-[#0C1D1E] rounded-[10px] font-bold font-battambang md:py-3 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
+            style={{
+              background:
+                "linear-gradient(0deg, #C39B2E, #C39B2E), radial-gradient(51.25% 98.5% at 48.75% 11.11%, #FBC941 0%, rgba(251, 201, 65, 0) 100%)",
+            }}
+            onClick={handleClick}
+          >
+            Quero participar
+          </button>
+        </div>
+      </section>
+
+      <section className="md:hidden flex flex-col p-8 bg-[url('/images/bldrc/v3/bg-section-el-mobile.webp')] bg-center bg-cover bg-no-repeat w-[350px] h-[445px] mx-auto -mt-14">
+        <div className="max-w-[391px] text-white text-[22px] font-extrabold font-battambang">
+          <p>
+            Não perca a chance de{" "}
+            <span className="text-[#FBC941]">BLINDAR SEU 2026</span> e
+            transformar sua vida de uma vez por todas.
+          </p>
+          <p className="mt-4 font-normal">
+            Ou fique parado no mesmo lugar, reclamando dos mesmos problemas.
+          </p>
+        </div>
+        <div className="w-full mt-4">
           <p className="text-white text-[14px] font-normal text-center mb-5 font-battambang">Clique no botão abaixo e inscreva-se gratuitamente agora!</p>
           <button
             className="w-full text-[#0C1D1E] rounded-[10px] font-bold font-battambang md:py-3 py-2 px-6 text-lg tracking-wide transition-all hover:brightness-110"
